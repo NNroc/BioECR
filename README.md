@@ -1,5 +1,5 @@
 # BioECR
-Code for [](https://)
+Code for [](https://1)
 
 ## Dataset
 The [CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414) dataset can be downloaded following the instructions at [here](https://biocreative.bioinformatics.udel.edu/media/store/files/2016/CDR_Data.zip). 
@@ -38,7 +38,12 @@ biodoc
 It is worth noting that BioECR needs to generate intermediate data (`{}-gc.json`) from entity extraction prediction results.
 
 ## Environment
+由于geniass-1.00.tar.gz原地址已不可用，我们这里提供了geniass-1.00.tar.gz在./data_preprocess/commom/
 ```
+conda create -n BioECR python=3.8
+conda activate BioECR
+pip install -r requirements.txt
+cd ./data_preprocess/common
 tar xvzf geniass-1.00.tar.gz
 cd geniass
 make
