@@ -1,0 +1,11 @@
+python src/train_me.py \
+    --train_file train.json \
+    --dev_file dev.json \
+    --test_file test.json \
+    --model_name_or_path /data/pretrained/BiomedNLP-PubMedBERT-base-uncased-abstract \
+    --num_epoch 50 \
+    --learning_rate 5e-5 \
+    --notes GDA-PubMedBERT-base-me \
+    --dataset GDA \
+    --evaluation_steps 1000 \
+    --no_dev 0
