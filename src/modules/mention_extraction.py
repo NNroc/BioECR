@@ -17,8 +17,6 @@ class MeModel(nn.Module):
             self.id2e_types = id2e_types_description_name_cdr
         elif dataset == 'GDA':
             self.id2e_types = id2e_types_description_name_gda
-        else:
-            self.tag_dataset = tag_default
 
         self.tag_dataset = tag_default
         self.tag_dataset = {value: key for key, value in self.tag_dataset.items()}
