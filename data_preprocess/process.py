@@ -1,15 +1,15 @@
 import os
-import re
-from tqdm import tqdm
-from recordtype import recordtype
-from collections import OrderedDict
 import argparse
 import pickle
 import json
-from itertools import permutations, combinations
-from tools import sentence_split_genia, tokenize_genia, adjust_offsets, find_mentions, find_cross, fix_sent_break, \
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from data_preprocess.tools import sentence_split_genia, tokenize_genia, adjust_offsets, find_mentions, find_cross, \
+    fix_sent_break, \
     generate_pairs, generate_pairs_multi_entities
-from readers import *
+from data_preprocess.readers import *
 
 TextStruct = recordtype('TextStruct', 'pmid txt')
 EntStruct = recordtype('EntStruct', 'pmid name off1 off2 type kb_id sent_no word_id bio')
