@@ -7,8 +7,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from data_preprocess.tools import sentence_split_genia, tokenize_genia, adjust_offsets, find_mentions, find_cross, \
-    fix_sent_break, \
-    generate_pairs, generate_pairs_multi_entities
+    fix_sent_break, generate_pairs, generate_pairs_multi_entities
 from data_preprocess.readers import *
 
 TextStruct = recordtype('TextStruct', 'pmid txt')

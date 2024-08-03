@@ -1,0 +1,13 @@
+{"dataset": "CDR", "name": "Chemical", "description": "chemicals and drugs .", "description_source": ""}
+{"dataset": "CDR", "name": "Disease", "description": "diseases", "description_source": ""}
+{"dataset": "GDA", "name": "Gene", "description": "genes , proteins , mRNA and other gene products", "description_source": ""}
+{"dataset": "GDA", "name": "Disease", "description": "diseases", "description_source": ""}
+{"dataset": "BioRED", "name": "ChemicalEntity", "description": "chemicals and drugs", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "BioRED", "name": "DiseaseOrPhenotypicFeature", "description": "diseases , symptoms , and some disease - related phenotypes", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "BioRED", "name": "GeneOrGeneProduct", "description": "genes , proteins , mRNA and other gene products", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "BioRED", "name": "SequenceVariant", "description": "genomic / protein variants ( including substitutions , deletions , insertions , and others )", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "BioRED", "name": "OrganismTaxon", "description": "species in the hierarchical taxonomy of organisms", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "BioRED", "name": "CellLine", "description": "cell lines", "description_source": "BioRED: A Rich Biomedical Relation Extraction Dataset"}
+{"dataset": "all", "name": "Chemical", "description": "chemicals and drugs .", "description_source": ""}
+{"dataset": "all", "name": "Disease", "description": "diseases", "description_source": ""}
+{"dataset": "all", "name": "Gene", "description": "genes , proteins , mRNA and other gene products", "description_source": ""}

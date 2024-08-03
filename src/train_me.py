@@ -314,24 +314,25 @@ if __name__ == "__main__":
         root_dir = os.path.dirname(os.path.realpath(__file__))
         root_dir = os.path.dirname(root_dir)
         result_dir = os.path.join(root_dir, f"result/{args.dataset}/me")
+        os.makedirs(result_dir, exist_ok=True)
         dev_file = os.path.join(result_dir, "{}_dev.json".format(args.notes))
         test_file = os.path.join(result_dir, "{}_test.json".format(args.notes))
 
         model.load_state_dict(torch.load(args.load_path))
-        dev_features = read_dataset(tokenizer, filename=args.dev_file, dataset=args.dataset, task='me')
         test_features = read_dataset(tokenizer, filename=args.test_file, dataset=args.dataset, task='me')
         if args.no_dev == 0:
+            dev_features = read_dataset(tokenizer, filename=args.dev_file, dataset=args.dataset, task='me')
             dev_score, dev_coverage, dev_output = evaluate(args, model, dev_features, tag="dev")
             print(dev_score, dev_coverage)
-            f_dev = open(dev_file, 'w', encoding='utf-8')
-            for entry in dev_output:
-                jsonstr = json.dumps(entry)
-                f_dev.write(jsonstr + "\n")
-            f_dev.close()
+            with open(dev_file, 'w', encoding='utf-8') as f_dev:
+                for entry in dev_output:
+                    jsonstr = json.dumps(entry)
+                    f_dev.write(jsonstr + "\n")
+                f_dev.close()
         test_score, test_coverage, test_output = evaluate(args, model, test_features, tag="test")
         print(test_score, test_coverage)
-        f_test = open(test_file, 'w', encoding='utf-8')
-        for entry in test_output:
-            jsonstr = json.dumps(entry)
-            f_test.write(jsonstr + "\n")
-        f_test.close()
+        with open(test_file, 'w', encoding='utf-8') as f_test:
+            for entry in test_output:
+                jsonstr = json.dumps(entry)
+                f_test.write(jsonstr + "\n")
+            f_test.close()

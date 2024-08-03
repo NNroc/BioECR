@@ -111,8 +111,9 @@ def train(args, model, train_features, dev_features, test_features=None):
                 loss = model.compute_loss(**inputs)
                 loss = loss / args.gradient_accumulation_steps
                 cum_loss += loss
-                with amp.scale_loss(loss, optimizer) as scaled_loss:
-                    scaled_loss.backward()
+                loss.backward()
+                # with amp.scale_loss(loss, optimizer) as scaled_loss:
+                #     scaled_loss.backward()
                 if (step + 1) % args.gradient_accumulation_steps == 0:
                     if args.max_grad_norm > 0:
                         torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), args.max_grad_norm)
@@ -387,5 +388,6 @@ if __name__ == "__main__":
         test_features = read_dataset(tokenizer, filename=args.test_file, dataset=args.dataset, task='gc')
         test_score, test_output, test_string_pre = evaluate(args, model, test_features, tag="test")
         print(test_output)
+        os.makedirs('./result/pred', exist_ok=True)
         with open('./result/pred/test.txt', 'w') as file:
             file.write(test_string_pre)

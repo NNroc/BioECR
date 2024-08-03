@@ -31,14 +31,14 @@ biodoc
  |    |-- CDR-cre.pt
  |    |-- GDA-cre.pt
  |    |-- BioRED-cre.pt
- |    |-- CDR-cre-perfect.pt
+ |    |-- CDR-cre-p.pt
  |    |-- GDA-cre-p.pt
  |    |-- BioRED-cre-p.pt
 ```
 It is worth noting that BioECR needs to generate intermediate data (`{}-gc.json`) from entity extraction prediction results.
 
 ## Environment
-由于geniass-1.00.tar.gz原地址已不可用，我们这里提供了geniass-1.00.tar.gz在./data_preprocess/commom/
+Due to the unavailability of the original address for geniass-1.00.tar.gz, we have provided geniass-1.00.tar.gz here/ data_preprocess/commom/
 ```
 conda create -n BioECR python=3.8
 conda activate BioECR
@@ -47,18 +47,15 @@ cd ./data_preprocess/common
 tar xvzf geniass-1.00.tar.gz
 cd geniass
 make
-cd ..
-git clone https://github.com/bornabesic/genia-tagger-py.git
-cd genia-tagger-py
-cd ../../
-chmod +x ./data_preprocess/common/genia-tagger-py/geniatagger-3.0.2/geniatagger
+cd ../../../
+chmod +x ./data_preprocess/common/
 ```
 
 ## Preprocessing Data
 ```
-bash ./data_preprocess/pre_CDR.sh
-bash ./data_preprocess/pre_GDA.sh
-bash ./data_preprocess/pre_BioRED.sh
+bash ./script/pre_CDR.sh
+bash ./script/pre_GDA.sh
+bash ./script/pre_BioRED.sh
 ```
 
 ## Training & Evaluation

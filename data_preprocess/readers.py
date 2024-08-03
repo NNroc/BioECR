@@ -55,7 +55,7 @@ def readPubTator(args, split=';'):
                 ent_name = line[3]
                 ent_type = line[4]
                 kb_id = line[5].split(split)
-                if ent_type not in ent_type_list_biored_all and args.data == 'BioRED':
+                if ent_type not in ent_type_list_biored_need and args.data == 'BioRED':
                     continue
 
                 # replace weird symbols and spaces
