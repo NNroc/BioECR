@@ -111,9 +111,8 @@ def train(args, model, train_features, dev_features, test_features=None):
                 loss = model.compute_loss(**inputs)
                 loss = loss / args.gradient_accumulation_steps
                 cum_loss += loss
-                loss.backward()
-                # with amp.scale_loss(loss, optimizer) as scaled_loss:
-                #     scaled_loss.backward()
+                with amp.scale_loss(loss, optimizer) as scaled_loss:
+                    scaled_loss.backward()
                 if (step + 1) % args.gradient_accumulation_steps == 0:
                     if args.max_grad_norm > 0:
                         torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), args.max_grad_norm)
@@ -175,7 +174,7 @@ def train(args, model, train_features, dev_features, test_features=None):
         {"params": [p for n, p in model.named_parameters() if not "bert" in n], "lr": 1e-4},
     ]
     optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.adam_epsilon)
-    # model, optimizer = amp.initialize(model, optimizer, opt_level="O1", verbosity=0)
+    model, optimizer = amp.initialize(model, optimizer, opt_level="O1", verbosity=0)
     num_steps = 0
     model.zero_grad()
     finetune(train_features, optimizer, args.num_epoch, num_steps)
@@ -364,7 +363,6 @@ if __name__ == "__main__":
     pad_token_id = tokenizer.convert_tokens_to_ids(pad_token)
     config.bos_token_id, config.eos_token_id, config.pad_token_id = bos_token_id, eos_token_id, pad_token_id
     config.dataset = args.dataset
-    print(config)
     encoder = AutoModel.from_pretrained(args.model_name_or_path)
     model = CREModel(config, encoder)
     model.to(device)
@@ -379,7 +377,7 @@ if __name__ == "__main__":
         test_features = read_dataset(tokenizer, filename=args.test_file, dataset=args.dataset, task='gc')
         train(args, model, train_features, dev_features, test_features)
     else:
-        # model = amp.initialize(model, opt_level="O1", verbosity=0)
+        model = amp.initialize(model, opt_level="O1", verbosity=0)
         model.load_state_dict(torch.load(args.load_path))
         if args.no_dev == 0:
             dev_features = read_dataset(tokenizer, filename=args.dev_file, dataset=args.dataset, task='gc')

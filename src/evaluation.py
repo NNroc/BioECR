@@ -190,7 +190,8 @@ def compute_re_f1_pubtator(cluster_mappings=None, pred_relations: list = None, g
         pred_cnt += len(p_relations)
         tp_li = []
         for pr in new_p_relations:
-            if pr in g_relations:
+            prr = {'h': pr['t'], 't': pr['h'], 'r': pr['r']}
+            if pr in g_relations or prr in g_relations:
                 tp_cnt += 1
                 tp_li.append(1)
             else:
@@ -217,9 +218,10 @@ def compute_re_f1_pubtator_real(cluster_mappings=None, pred_relations: list = No
         tp_li = []
         tp_set = set()
         for pr in new_p_re:
-            if pr in g_relations:
+            prr = {'h': pr['t'], 't': pr['h'], 'r': pr['r']}
+            if pr in g_relations or prr in g_relations:
                 tp_li.append(1)
-                if str(pr) not in tp_set:
+                if str(pr) not in tp_set and str(prr) not in tp_set:
                     tp_set.add(str(pr))
                     tp_cnt += 1
             else:

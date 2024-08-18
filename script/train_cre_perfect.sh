@@ -1,5 +1,6 @@
 #!/bin/bash
-export CUDA_VISIBLE_DEVICES=0
+#export CUDA_VISIBLE_DEVICES=1
+num=1
 
 # Prepro CDR
 python src/prepro.py \
@@ -7,7 +8,6 @@ python src/prepro.py \
     --no_dev 1 \
     --perfect 1
 
-num=10
 for ((i=1;i<=num;i++))
 do
   python src/train_cre.py \
@@ -24,7 +24,6 @@ do
   sleep 10
 done
 
-num=5
 # Prepro GDA
 python src/prepro.py \
     --dataset GDA \
@@ -47,7 +46,6 @@ do
       --no_dev 0
 done
 
-num=10
 # Prepro BioRED
 python src/prepro.py \
     --dataset BioRED \

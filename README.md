@@ -5,6 +5,9 @@ Code for [](https://1)
 The [CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414) dataset can be downloaded following the instructions at [here](https://biocreative.bioinformatics.udel.edu/media/store/files/2016/CDR_Data.zip). 
 The [GDA](https://link.springer.com/chapter/10.1007/978-3-030-17083-7_17) dataset can be downloaded following the instructions at [here](https://bitbucket.org/alexwuhkucs/gda-extraction/get/fd4a7409365e.zip). 
 The [BioRED](https://academic.oup.com/bib/article/23/5/bbac282/6645993) dataset can be downloaded following the instructions at [here](https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/).
+The [PubMedBERT](https://doi.org/10.1145/3458754) pre-trained language model can be downloaded following the instructions at [here](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract/tree/main).
+The fine-tuned model (CDR-me.pt, CDR-cre.pt, CDR-cre-p.pt ...) can be downloaded following the instructions at [here](https://huggingface.co/NNroc/BioECR/tree/main)
+Several samples have been added to the data folder (`./data/CDR/`, `./data/GDA/`, and `./data/BioRED/`)
 
 The expected structure of files is:
 ```
@@ -35,7 +38,7 @@ biodoc
  |    |-- GDA-cre-p.pt
  |    |-- BioRED-cre-p.pt
 ```
-It is worth noting that BioECR needs to generate intermediate data (`{}-gc.json`) from entity extraction prediction results.
+It is worth noting that BioECR needs to generate intermediate data (`{}.json`) from preprocess results and (`{}-gc.json`) from entity extraction prediction results.
 
 ## Environment
 Due to the unavailability of the original address for geniass-1.00.tar.gz, we have provided geniass-1.00.tar.gz here/ data_preprocess/commom/
@@ -71,17 +74,17 @@ bash script/train_CDR_me.sh
 bash script/train_CDR_cre.sh
 ```
 
-training CR and RE in perfect entity extraction .
+training CR and RE in perfect entity extraction.
 ```
 bash script/train_cre_perfect.sh
 ```
 
-End to end training (including three data sets).
+End to end training (including three datasets).
 ```
 bash script/train_me_cr_re.sh
 ```
 
-Only evaluate model (including three data sets).
+Only evaluate model (including three datasets).
 ```
 bash script/evaluate.sh
 ```

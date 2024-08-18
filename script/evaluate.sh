@@ -1,5 +1,5 @@
 #!/bin/bash
-export CUDA_VISIBLE_DEVICES=0
+#export CUDA_VISIBLE_DEVICES=1
 
 # entity extraction
 python src/train_me.py \
