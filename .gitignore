@@ -1,4 +1,8 @@
 .idea
-data/CDR
-data/GDA
-data/BioRED
+data/CDR/pre
+data/GDA/pre
+data/GDA/training_data
+data/GDA/testing_data
+data/BioRED/pre
+data/BioRED/BioRED_all
+data/BioRED/BioRED_need

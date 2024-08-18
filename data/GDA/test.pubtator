@@ -1,0 +1,26 @@
+10091612|t|Variations in the monoamine oxidase B (MAOB) gene are associated with Parkinson's disease.
+10091612|a|The monoamine oxidase B gene (MAOB; Xp15.21-4) is a candidate gene for Parkinson's disease (PD) given its role in dopamine metabolism and its possible role in the activation of neurotoxins. The association of MAOB polymorphisms (a [GT] repeat allelic variation in intron 2 and an A-G transition in intron 13) with Parkinson's disease (PD) was studied in an Australian cohort of 204 (male:female ratio 1.60) people with PD and 285 (male:female ratio 1.64) age- and gender-matched control subjects. Genomic DNA was extracted from venous blood and polymerase chain reaction was used to amplify the appropriate regions of the MAOB gene. The length of each (GT) repeat sequence was determined by 5% polyacrylamide denaturing gel electrophoresis and a DNA fragment analyzer, while the G-A genotype was determined using 2% agarose gel electrophoresis. The G-A polymorphism showed no association with PD (odds ratio [OR] = 0.80; p = 0.51; 95% confidence interval [CI] = 0.42-1.53). There was a significant difference in allele frequencies of the (GT) repeat allelic variation between patients and control subjects (chi2 = 20.09; p<0.01). After statistical adjustment for potential confounders using a logistic regression analysis, the (GT) repeat alleles > or =188 base pairs in the intron 2 marker of the MAOB gene were significantly associated with PD (OR = 4.60; p<0.00005; 95% CI = 1.97-10.77). The 186 base pair allele was also significantly associated with PD (OR = 1.85; p = 0.048; 95% CI = 1.01-3.42). The GT repeat in intron 2 of the MAOB gene is a powerful marker for PD in this large Australian cohort.
+10091612	70	89	Parkinson's disease	Disease	D010300
+10091612	162	181	Parkinson's disease	Disease	D010300
+10091612	183	185	PD	Disease	D010300
+10091612	405	424	Parkinson's disease	Disease	D010300
+10091612	426	428	PD	Disease	D010300
+10091612	510	512	PD	Disease	D010300
+10091612	984	986	PD	Disease	D010300
+10091612	1434	1436	PD	Disease	D010300
+10091612	1546	1548	PD	Disease	D010300
+10091612	1661	1663	PD	Disease	D010300
+10091612	323	325	GT	Disease	D013915
+10091612	744	746	GT	Disease	D013915
+10091612	1130	1132	GT	Disease	D013915
+10091612	1319	1321	GT	Disease	D013915
+10091612	1597	1599	GT	Disease	D013915
+10091612	18	37	monoamine oxidase B	Gene	4129
+10091612	39	43	MAOB	Gene	4129
+10091612	95	114	monoamine oxidase B	Gene	4129
+10091612	121	125	MAOB	Gene	4129
+10091612	300	304	MAOB	Gene	4129
+10091612	713	717	MAOB	Gene	4129
+10091612	1389	1393	MAOB	Gene	4129
+10091612	1626	1630	MAOB	Gene	4129
+10091612	GDA	4129	D010300

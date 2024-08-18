@@ -1,0 +1,20 @@
+10029606|t|Four new mutations in the erythroid-specific 5-aminolevulinate synthase (ALAS2) gene causing X-linked sideroblastic anemia: increased pyridoxine responsiveness after removal of iron overload by phlebotomy and coinheritance of hereditary hemochromatosis.
+10029606|a|X-linked sideroblastic anemia (XLSA) in four unrelated male probands was caused by missense mutations in the erythroid-specific 5-aminolevulinate synthase gene (ALAS2). All were new mutations: T647C, C1283T, G1395A, and C1406T predicting amino acid substitutions Y199H, R411C, R448Q, and R452C. All probands were clinically pyridoxine-responsive. The mutation Y199H was shown to be the first de novo XLSA mutation and occurred in a gamete of the proband's maternal grandfather. There was a significantly higher frequency of coinheritance of the hereditary hemochromatosis (HH) HFE mutant allele C282Y in 18 unrelated XLSA hemizygotes than found in the normal population, indicating a role for coinheritance of HFE alleles in the expression of this disorder. One proband (Y199H) with severe and early iron loading coinherited HH as a C282Y homozygote. The clinical and hematologic histories of two XLSA probands suggest that iron overload suppresses pyridoxine responsiveness. Notably, reversal of the iron overload in the Y199H proband by phlebotomy resulted in higher hemoglobin concentrations during pyridoxine supplementation. The proband with the R452C mutation was symptom-free on occasional phlebotomy and daily pyridoxine. These studies indicate the value of combined phlebotomy and pyridoxine supplementation in the management of XLSA probands in order to prevent a downward spiral of iron toxicity and refractory anemia.
+10029606	93	122	X-linked sideroblastic anemia	Disease	C536761
+10029606	254	283	X-linked sideroblastic anemia	Disease	C536761
+10029606	285	289	XLSA	Disease	C536761
+10029606	654	658	XLSA	Disease	C536761
+10029606	871	875	XLSA	Disease	C536761
+10029606	1151	1155	XLSA	Disease	C536761
+10029606	1592	1596	XLSA	Disease	C536761
+10029606	1665	1682	refractory anemia	Disease	D000740
+10029606	226	252	hereditary hemochromatosis	Disease	D006432
+10029606	799	825	hereditary hemochromatosis	Disease	D006432
+10029606	827	829	HH	Disease	D006432
+10029606	1079	1081	HH	Disease	D006432
+10029606	1647	1660	iron toxicity	Disease	D064420
+10029606	73	78	ALAS2	Gene	212
+10029606	415	420	ALAS2	Gene	212
+10029606	831	834	HFE	Gene	3077
+10029606	964	967	HFE	Gene	3077
+10029606	GDA	212	C536761

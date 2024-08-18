@@ -6,7 +6,7 @@ The [CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/
 The [GDA](https://link.springer.com/chapter/10.1007/978-3-030-17083-7_17) dataset can be downloaded following the instructions at [here](https://bitbucket.org/alexwuhkucs/gda-extraction/get/fd4a7409365e.zip). 
 The [BioRED](https://academic.oup.com/bib/article/23/5/bbac282/6645993) dataset can be downloaded following the instructions at [here](https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/).
 The [PubMedBERT](https://doi.org/10.1145/3458754) pre-trained language model can be downloaded following the instructions at [here](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract/tree/main).
-The fine-tuned model (CDR-me.pt, CDR-cre.pt, CDR-cre-p.pt ...) can be downloaded following the instructions at [here](https://huggingface.co/NNroc/BioECR/tree/main)
+The fine-tuned model (CDR-me.pt, CDR-cre.pt, CDR-cre-p.pt ...) can be downloaded at [here](https://huggingface.co/NNroc/BioECR/tree/main)
 Several samples have been added to the data folder (`./data/CDR/`, `./data/GDA/`, and `./data/BioRED/`)
 
 The expected structure of files is:
