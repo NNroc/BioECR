@@ -100,5 +100,6 @@ The evaluation results are provided in the log. To evaluate RE result on test da
   number={},
   pages={1-12},
   keywords={Hypotension;Labeling;Biological system modeling;Named entity recognition;Diseases;Chemicals;Time complexity;Text recognition;Computational biology;Bioinformatics;Biomedical document-level information extraction;biomedical entity recognition;biomedical coreference resolution;biomedical relation extraction},
-  doi={10.1109/TCBBIO.2025.3582790}}
+  doi={10.1109/TCBBIO.2025.3582790}
+}
 ```
