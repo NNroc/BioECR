@@ -1,5 +1,5 @@
 # BioECR
-Code for [IEEE Transactions on Computational Biology and Bioinformatics](https://ieeexplore.ieee.org/document/11049009)
+Code for [IEEE Transactions on Computational Biology and Bioinformatics](https://ieeexplore.ieee.org/document/11049009).
 
 ## Dataset
 The [CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414) dataset can be downloaded following the instructions at [here](https://biocreative.bioinformatics.udel.edu/media/store/files/2016/CDR_Data.zip). 
