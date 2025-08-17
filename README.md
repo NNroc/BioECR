@@ -1,5 +1,5 @@
 # BioECR
-Code for [](https://1)
+Code for [IEEE Transactions on Computational Biology and Bioinformatics](https://ieeexplore.ieee.org/document/11049009)
 
 ## Dataset
 The [CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414) dataset can be downloaded following the instructions at [here](https://biocreative.bioinformatics.udel.edu/media/store/files/2016/CDR_Data.zip). 
@@ -89,3 +89,16 @@ Only evaluate model (including three datasets).
 bash script/evaluate.sh
 ```
 The evaluation results are provided in the log. To evaluate RE result on test data, you should first save the model using `--save_path` argument before training. The model correponds to the best dev results will be saved. After that, You can evaluate the saved model by setting the `--load_path` argument, and the program will generate a test file `result.json`.
+
+```
+@article{BioECR2025,
+  author={Nie, Pengyuan and Lin, Mengxuan and Ning, Jinzhong and Yang, Zhihao and Wang, Lei},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics}, 
+  title={Bi-encoder-based approach to biomedical document-level entity recognition and relation extraction}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Hypotension;Labeling;Biological system modeling;Named entity recognition;Diseases;Chemicals;Time complexity;Text recognition;Computational biology;Bioinformatics;Biomedical document-level information extraction;biomedical entity recognition;biomedical coreference resolution;biomedical relation extraction},
+  doi={10.1109/TCBBIO.2025.3582790}}
+```
